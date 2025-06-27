@@ -1,6 +1,6 @@
 const { queryParams } = require("../../db/db");
 const { autosecureMap } = require("./botHandler");
-const autosecure = require("../../autosecure/autosecure");
+const autosecure = require("../../autosecure");
 module.exports = async () => {
   let autosecures = await queryParams(`SELECT * FROM autosecure`);
   for (let autosec of autosecures) {
